@@ -1,0 +1,12 @@
+F:\test\StorageMicroservice\StorageMicroservice.Domain\bin\Debug\net8.0\StorageMicroservice.Domain.deps.json
+F:\test\StorageMicroservice\StorageMicroservice.Domain\bin\Debug\net8.0\StorageMicroservice.Domain.dll
+F:\test\StorageMicroservice\StorageMicroservice.Domain\bin\Debug\net8.0\StorageMicroservice.Domain.pdb
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.AssemblyInfoInputs.cache
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.AssemblyInfo.cs
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.csproj.CoreCompileInputs.cache
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.sourcelink.json
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.dll
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\refint\StorageMicroservice.Domain.dll
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\StorageMicroservice.Domain.pdb
+F:\test\StorageMicroservice\StorageMicroservice.Domain\obj\Debug\net8.0\ref\StorageMicroservice.Domain.dll

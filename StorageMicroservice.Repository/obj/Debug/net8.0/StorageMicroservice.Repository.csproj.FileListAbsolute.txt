@@ -1,0 +1,16 @@
+F:\test\StorageMicroservice\StorageMicroservice.Repository\bin\Debug\net8.0\StorageMicroservice.Repository.deps.json
+F:\test\StorageMicroservice\StorageMicroservice.Repository\bin\Debug\net8.0\StorageMicroservice.Repository.dll
+F:\test\StorageMicroservice\StorageMicroservice.Repository\bin\Debug\net8.0\StorageMicroservice.Repository.pdb
+F:\test\StorageMicroservice\StorageMicroservice.Repository\bin\Debug\net8.0\StorageMicroservice.Domain.dll
+F:\test\StorageMicroservice\StorageMicroservice.Repository\bin\Debug\net8.0\StorageMicroservice.Domain.pdb
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.csproj.AssemblyReference.cache
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.AssemblyInfoInputs.cache
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.AssemblyInfo.cs
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.csproj.CoreCompileInputs.cache
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.sourcelink.json
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageM.9BEA5355.Up2Date
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.dll
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\refint\StorageMicroservice.Repository.dll
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\StorageMicroservice.Repository.pdb
+F:\test\StorageMicroservice\StorageMicroservice.Repository\obj\Debug\net8.0\ref\StorageMicroservice.Repository.dll

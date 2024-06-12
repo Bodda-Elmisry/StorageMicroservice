@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "StorageMicroservice.Repository/1.0.0": {
+        "dependencies": {
+          "StorageMicroservice.Domain": "1.0.0"
+        },
+        "runtime": {
+          "StorageMicroservice.Repository.dll": {}
+        }
+      },
+      "StorageMicroservice.Domain/1.0.0": {
+        "runtime": {
+          "StorageMicroservice.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StorageMicroservice.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StorageMicroservice.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
