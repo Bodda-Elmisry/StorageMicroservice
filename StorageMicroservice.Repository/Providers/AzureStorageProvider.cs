@@ -1,6 +1,7 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using StorageMicroservice.Repository.Configrations;
 using System;
 using System.Collections.Generic;
@@ -16,20 +17,26 @@ namespace StorageMicroservice.Repository.Providers
         private readonly BlobServiceClient blobServiceClient;
         private readonly BlobContainerClient containerClient;
 
-        public AzureStorageProvider(AppConfigrations appConfigrations)
+        public AzureStorageProvider(IOptions<AppConfigrations> appConfigrations)
         {
-            blobServiceClient = new BlobServiceClient(appConfigrations.AzureBlobStorageConnectionString);
-            containerClient = blobServiceClient.GetBlobContainerClient(appConfigrations.AzureBlobStorageContainerName);
+            blobServiceClient = new BlobServiceClient(appConfigrations.Value.AzureBlobStorageConnectionString);
+            containerClient = blobServiceClient.GetBlobContainerClient(appConfigrations.Value.AzureBlobStorageContainerName);
         }
 
-        public async Task DeleteFileAsync(string id)
+        public async Task SaveFileAsync(string id, IFormFile file)
         {
-            var blobClient = containerClient.GetBlobClient(id);
-            
-            await blobClient.DeleteIfExistsAsync();
+            try
+            {
+                var blobClient = containerClient.GetBlobClient(id);
+
+                await using var stream = file.OpenReadStream();
+                blobClient.Upload(stream);
+                await blobClient.UploadAsync(stream, new BlobHttpHeaders { ContentType = file.ContentType });
+            }
+            catch (Exception ex) { }
         }
 
-        public async Task<Stream> GetFileAsync(string id)
+        public async Task<Stream?> GetFileAsync(string id)
         {
             var blobClient = containerClient.GetBlobClient(id);
             
@@ -43,13 +50,11 @@ namespace StorageMicroservice.Repository.Providers
             return response.Value.Content;
         }
 
-        public async Task SaveFileAsync(string id, IFormFile file)
+        public async Task DeleteFileAsync(string id)
         {
             var blobClient = containerClient.GetBlobClient(id);
-            
-            await using var stream = file.OpenReadStream();
-            
-            await blobClient.UploadAsync(stream, new BlobHttpHeaders { ContentType = file.ContentType });
+
+            await blobClient.DeleteIfExistsAsync();
         }
     }
 }

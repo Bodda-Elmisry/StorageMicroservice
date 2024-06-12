@@ -1,12 +1,14 @@
 
 using Microsoft.EntityFrameworkCore;
 using StorageMicroservice.Infrastructure.Data;
+using StorageMicroservice.Infrastructure.Repository;
 using StorageMicroservice.Infrastructure.Services;
 using StorageMicroservice.Repository.Configrations;
 using StorageMicroservice.Repository.Factories;
 using StorageMicroservice.Repository.IRepositories;
 using StorageMicroservice.Repository.IServices;
 using StorageMicroservice.Repository.Providers;
+using Microsoft.Extensions.Azure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,14 +28,21 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 
 builder.Services.Configure<AppConfigrations>(builder.Configuration.GetSection("AppConfigrations"));
 
-builder.Services.AddScoped<IFileMetadataRepository, IFileMetadataRepository>();
-
-builder.Services.AddScoped<IFileMetadataService, FileMetadataService>();
-
 builder.Services.AddSingleton<LocalStorageProvider>();
 builder.Services.AddSingleton<AzureStorageProvider>();
 
 builder.Services.AddSingleton<IStorageProviderFactory, StorageProviderFactory>();
+
+builder.Services.AddScoped<IFileMetadataRepository, FileMetadataRepository>();
+
+builder.Services.AddScoped<IFileMetadataService, FileMetadataService>();
+builder.Services.AddAzureClients(clientBuilder =>
+{
+    clientBuilder.AddBlobServiceClient(builder.Configuration["localstorage:blob"]!, preferMsi: true);
+    clientBuilder.AddQueueServiceClient(builder.Configuration["localstorage:queue"]!, preferMsi: true);
+});
+
+
 
 
 

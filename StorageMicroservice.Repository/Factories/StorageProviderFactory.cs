@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using StorageMicroservice.Repository.Configrations;
 using StorageMicroservice.Repository.Providers;
 using System;
@@ -13,11 +14,13 @@ namespace StorageMicroservice.Repository.Factories
     {
         private readonly AppConfigrations appConfigrations;
         private readonly IServiceProvider serviceProvider;
+        private readonly ILocalStorageProvider localStorageProvider;
 
-        public StorageProviderFactory(AppConfigrations appConfigrations, IServiceProvider serviceProvider)
+        public StorageProviderFactory(IOptions<AppConfigrations> appConfigrations, IServiceProvider serviceProvider)
         {
-            this.appConfigrations = appConfigrations;
+            this.appConfigrations = appConfigrations.Value;
             this.serviceProvider = serviceProvider;
+            //this.localStorageProvider = localStorageProvider;
         }
 
         public IStorageProvider GetProvider()

@@ -10,7 +10,9 @@ namespace StorageMicroservice.Repository.Providers
     public interface IStorageProvider
     {
         Task SaveFileAsync(string id, IFormFile file);
-        Task<Stream> GetFileAsync(string id);
+        Task<Stream?> GetFileAsync(string id);
         Task DeleteFileAsync(string id);
+
+
     }
 }

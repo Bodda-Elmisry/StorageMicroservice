@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace StorageMicroservice.Repository.Providers
 {
-    public class LocalStorageProvider : IStorageProvider
+    public class LocalStorageProvider : IStorageProvider 
     {
         private readonly AppConfigrations appConfigrations;
 
-        public LocalStorageProvider(AppConfigrations appConfigrations)
+        public LocalStorageProvider(IOptions<AppConfigrations> appConfigrations)
         {
-            this.appConfigrations = appConfigrations;
+            this.appConfigrations = appConfigrations.Value;
         }
 
         public async Task DeleteFileAsync(string id)
