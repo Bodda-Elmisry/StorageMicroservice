@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using StorageMicroservice.Infrastructure.Data;
 using StorageMicroservice.Infrastructure.Services;
+using StorageMicroservice.Repository.Configrations;
 using StorageMicroservice.Repository.IRepositories;
 using StorageMicroservice.Repository.IServices;
 
@@ -20,6 +21,8 @@ builder.Services.AddDbContext<AppDBContext>(options =>
                 ),
                 ServiceLifetime.Singleton
         );
+
+builder.Services.Configure<AppConfigrations>(builder.Configuration.GetSection("AppConfigrations"));
 
 builder.Services.AddScoped<IFileMetadataRepository, IFileMetadataRepository>();
 

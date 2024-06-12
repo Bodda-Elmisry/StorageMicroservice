@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StorageMicroservice.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdc608539cd6694035bc275e77432c75fe599b28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+399fb839f0380b5bc4a4b2dd52e7e2b8de339724")]
 [assembly: System.Reflection.AssemblyProductAttribute("StorageMicroservice.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StorageMicroservice.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
