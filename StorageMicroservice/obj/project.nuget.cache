@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+IUxYb5nYJAjK5L1VUd3a8Oi7+2vgzliEerlzPuxR7rqiIqYFZtTvDcUnAxJhhqyFN0MpBV5nC5g9nPMSo7GGA==",
+  "success": true,
+  "projectFilePath": "F:\\test\\StorageMicroservice\\StorageMicroservice\\StorageMicroservice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BODDA\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\BODDA\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\BODDA\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\BODDA\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\BODDA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\BODDA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
