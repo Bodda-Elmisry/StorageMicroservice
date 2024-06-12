@@ -11,5 +11,7 @@ namespace StorageMicroservice.Repository.Configrations
         public string LocalStoragePath { get; set; }
         public string AzureBlobStorageConnectionString { get; set; }
         public string AzureBlobStorageContainerName { get; set; }
+        public string StorageType { get; set; }
+
     }
 }

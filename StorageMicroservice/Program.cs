@@ -3,8 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using StorageMicroservice.Infrastructure.Data;
 using StorageMicroservice.Infrastructure.Services;
 using StorageMicroservice.Repository.Configrations;
+using StorageMicroservice.Repository.Factories;
 using StorageMicroservice.Repository.IRepositories;
 using StorageMicroservice.Repository.IServices;
+using StorageMicroservice.Repository.Providers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,13 @@ builder.Services.Configure<AppConfigrations>(builder.Configuration.GetSection("A
 builder.Services.AddScoped<IFileMetadataRepository, IFileMetadataRepository>();
 
 builder.Services.AddScoped<IFileMetadataService, FileMetadataService>();
+
+builder.Services.AddSingleton<LocalStorageProvider>();
+builder.Services.AddSingleton<AzureStorageProvider>();
+
+builder.Services.AddSingleton<IStorageProviderFactory, StorageProviderFactory>();
+
+
 
 var app = builder.Build();
 
