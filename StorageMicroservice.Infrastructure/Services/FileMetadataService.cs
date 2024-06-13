@@ -54,10 +54,10 @@ namespace StorageMicroservice.Infrastructure.Services
             return response;
         }
 
-        public async Task<FileMetadataCommandResponseDTO> DeleteFileMetadata(Guid FileId)
+        public async Task<FileMetadataCommandResponseDTO> DeleteFileMetadata(FileMetadata FileMetadata)
         {
             var responce = new FileMetadataCommandResponseDTO();
-            var exist = await metadataRepository.HasMetadataAsync(FileId);
+            var exist = await metadataRepository.HasMetadataAsync(FileMetadata.Id);
             if (!exist) 
             {
                 responce.result = false;
@@ -65,9 +65,7 @@ namespace StorageMicroservice.Infrastructure.Services
                 return responce;
             }
 
-            var file = await metadataRepository.GetMetadataAsync(FileId);
-
-            responce.result = await metadataRepository.DeleteMetadataAsync(file);
+            responce.result = await metadataRepository.DeleteMetadataAsync(FileMetadata);
 
             responce.Error = responce.result ? string.Empty : "Error in deleting metadata";
 
@@ -84,7 +82,10 @@ namespace StorageMicroservice.Infrastructure.Services
             return await metadataRepository.GetMetadataAsync(FileId);
         }
 
+        public async Task<FileMetadata> GetFileMetadataByName(string fileName)
+        {
+            return await metadataRepository.GetMetadataByNameAsync(fileName);
 
-
+        }
     }
 }

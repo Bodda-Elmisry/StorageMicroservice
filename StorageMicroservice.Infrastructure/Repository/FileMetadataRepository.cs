@@ -54,5 +54,11 @@ namespace StorageMicroservice.Infrastructure.Repository
         {
             return await context.FilesMetadata.AnyAsync(f=> f.Id == metadataId);
         }
+
+        public async Task<FileMetadata?> GetMetadataByNameAsync(string fileName)
+        {
+            return await context.FilesMetadata.FirstOrDefaultAsync(f => f.FileName == fileName);
+
+        }
     }
 }

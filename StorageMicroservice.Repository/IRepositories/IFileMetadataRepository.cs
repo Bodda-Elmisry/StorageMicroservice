@@ -18,6 +18,7 @@ namespace StorageMicroservice.Repository.IRepositories
         Task<IEnumerable<FileMetadata>> GetAllMetadataAsync();
 
         Task<FileMetadata> GetMetadataAsync(Guid metadataId);
+        Task<FileMetadata?> GetMetadataByNameAsync(string fileName);
 
         Task<bool> HasMetadataAsync(Guid metadataId);
 

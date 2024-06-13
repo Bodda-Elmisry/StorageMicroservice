@@ -34,7 +34,7 @@ namespace StorageMicroservice.Repository.Providers
             if (!File.Exists(filePath)) 
                 return null;
 
-            return new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            return new FileStream(filePath, FileMode.Open);
         }
 
         public async Task SaveFileAsync(string id, IFormFile file)
